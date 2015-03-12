@@ -1,9 +1,12 @@
+
+
 /**
  * Created by fun on 12.03.15.
  */
 import processing.core.*;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 public class Processing extends PApplet{
 
@@ -11,7 +14,7 @@ public class Processing extends PApplet{
     public void setup(){
         size(500,500);
         particles = new ArrayList<Particle>();
-        for(int i=0; i<100 ; i++){
+        for(int i=0; i<10000 ; i++){
             particles.add(new Particle(width/2,height/2));
         }
     }
@@ -25,6 +28,7 @@ public class Processing extends PApplet{
     }
 
     class Particle{
+        Random randomGenerator;
         float x;
         float y;
         int[][] dir = {
@@ -40,6 +44,7 @@ public class Processing extends PApplet{
         };
         //  Particle(){}
         Particle(float x,float y){
+            randomGenerator = new Random();
             this.x = x;
             this.y = y;
         }
@@ -47,10 +52,12 @@ public class Processing extends PApplet{
             rectMode(CENTER);
             stroke(0);
             fill(255,0,0);
-            rect(x,y,5,5);
+            rect(x,y,10,10);
         }
         void move(){
-            int ind  = round(random(8));
+            
+            
+            int ind = randomGenerator.nextInt(9);
             x=x+dir[ind][0];
             y=y+dir[ind][1];
         }
