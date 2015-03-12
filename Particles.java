@@ -1,3 +1,5 @@
+package Particle;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -51,19 +53,17 @@ class Particles {
         {
             Random randomGenerator = new Random();
             int randomInt = randomGenerator.nextInt(9);
-            Double randomDouble = randomGenerator.nextDouble();
            
             switch (randomInt) {
             case 0: break; // do nothing
             case 1: y--; x-- ; break;
-            case 2: x-- ; break;
+            case 2: x--; break;
             case 3: y++; x-- ; break;
             case 4: y++; break;
             case 5: y++; x++ ; break;
-            case 6: x++ ; break;
+            case 6: x++; break;
             case 7: y--; x++ ; break;
             case 8: y--; break;
-            
             }
         }
 }
