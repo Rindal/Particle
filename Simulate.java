@@ -1,3 +1,5 @@
+package Particle;
+
 
 import java.awt.Color;
 import javax.swing.JFrame;

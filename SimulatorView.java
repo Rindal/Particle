@@ -1,3 +1,5 @@
+package Particle;
+
 
 import java.awt.Canvas;
 import java.awt.Color;
@@ -62,7 +64,5 @@ class SimulatorView extends Canvas {
                 pixel(p.getX(),p.getY(), Color.red);
                  grid[p.getX()] [p.getY()]++;              
             }
- 
-            
         }
     } }
